@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Cake.destroy_all
+=begin Cake.destroy_all
 
 cakes = Cake.create!([
     {
@@ -100,7 +100,14 @@ cakes = Cake.create!([
 ])
 
 puts 'Cakes seeded 🌱'
+=end
 
+Customer.destroy_all
 
+20.times do
+    Customer.create(name:Faker::Name.name, address: Faker::Address.full_address, phone_number: Faker::PhoneNumber.cell_phone )
+end
+
+puts 'Customers seeded 🌱'
 
 puts 'Seeding complete'
