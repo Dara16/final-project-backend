@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Cake.destroy_all
+
 cakes = Cake.create!([
     {
         name: 'Birthday Cake', 
@@ -98,5 +100,7 @@ cakes = Cake.create!([
 ])
 
 puts 'Cakes seeded 🌱'
+
+
 
 puts 'Seeding complete'
