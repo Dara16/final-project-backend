@@ -81,7 +81,7 @@ cakes = Cake.create!([
     {
         name: 'Sponge Cake', 
         size: 'Small',
-        description: 'Light, airy cake dusted with sugar. Can be layered with fresh fruit',
+        description: 'Light, airy cake dusted with sugar and layered with fresh fruit',
         image: 'https://images.unsplash.com/photo-1559630854-e3615c5f4e46?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=435&q=80',       
         price: 4100
 
@@ -90,7 +90,7 @@ cakes = Cake.create!([
     {
         name: 'Yellow Layer Cake', 
         size: 'Medium',
-        description: 'Moist, tender and fluffy cake with luscious chocolate frsoting',
+        description: 'Moist, tender and fluffy cake with luscious chocolate frosting',
         image: 'https://images.unsplash.com/photo-1540337706094-da10342c93d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80',       
         price: 4500
 
