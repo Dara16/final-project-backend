@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-=begin Cake.destroy_all
+Cake.destroy_all
 
 cakes = Cake.create!([
     {
@@ -100,7 +100,7 @@ cakes = Cake.create!([
 ])
 
 puts 'Cakes seeded 🌱'
-=end
+
 
 Customer.destroy_all
 
@@ -109,5 +109,20 @@ Customer.destroy_all
 end
 
 puts 'Customers seeded 🌱'
+
+
+Order.destroy_all
+
+cakes = Cake.all
+
+customers = Customer.all
+
+finished = ['Yes', 'No']
+
+50.times do
+    Order.create(date: Faker::Date.backward(days: 50), order_number: Faker::Number.within(range:101..150), completed: finished.sample, cake_id: cakes.sample, customer_id: customers.sample )
+end
+
+puts 'Orders seeded 🌱'
 
 puts 'Seeding complete'
