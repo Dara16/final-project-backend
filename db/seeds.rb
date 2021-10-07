@@ -94,7 +94,7 @@ cakes = Cake.create!([
         image: 'https://images.unsplash.com/photo-1540337706094-da10342c93d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80',       
         price: 4500
 
-    },
+    }
 
 
 ])
@@ -105,22 +105,23 @@ puts 'Cakes seeded 🌱'
 Customer.destroy_all
 
 20.times do
-    Customer.create(name:Faker::Name.name, address: Faker::Address.full_address, phone_number: Faker::PhoneNumber.cell_phone )
+    Customer.create!({name:Faker::Name.name, address: Faker::Address.full_address, phone_number: Faker::PhoneNumber.cell_phone })
 end
 
 puts 'Customers seeded 🌱'
+
 =end
 
 Order.destroy_all
 
-cakes = Cake.all
+cakes = Cake.ids
 
-customers = Customer.all
+customers = Customer.ids
 
 finished = ['Yes', 'No']
 
 50.times do
-    Order.create(date: Faker::Date.backward(days: 50), order_number: Faker::Number.within(range:101..150), completed: finished.sample, cake_id: cakes.sample, customer_id: customers.sample )
+    Order.create!({date: Faker::Date.backward(days: 50), order_number: Faker::Number.within(range:101..150), completed: finished.sample, cake_id: cakes.sample, customer_id: customers.sample })
 end
 
 puts 'Orders seeded 🌱'
