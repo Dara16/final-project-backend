@@ -9,7 +9,7 @@ class OrdersController < ApplicationController
     def show
         id = params[:id]
         order = Order.find(id)
-        render json: order
+        render json: order, include: :customer
     end 
 
     def create
@@ -20,7 +20,7 @@ class OrdersController < ApplicationController
     def update
         id = params[:id]
         order = Order.find(id)
-        Order.update(order_params)
+        order.update(order_params)
         render json: order
     end
 

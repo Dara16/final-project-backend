@@ -20,7 +20,7 @@ class CakesController < ApplicationController
     def update
         id = params[:id]
         cake = Cake.find(id)
-        Cake.update(cake_params)
+        cake.update(cake_params)
         render json: cake
     end
 
