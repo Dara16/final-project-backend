@@ -127,7 +127,8 @@ customers = Customer.ids
 finished = ['Yes', 'No']
 
 50.times do
-    Order.create!({date: Faker::Date.backward(days: 50), order_number: Faker::Number.within(range:101..150), completed: finished.sample, cake_id: cakes.sample, customer_id: customers.sample })
+    Order.create!({date: Faker::Date.backward(days: 50), order_number: Faker::Number.within(range:101..150), 
+    completed: finished.sample, cake_id: cakes.sample, customer_id: customers.sample })
 end
 
 puts 'Orders seeded 🌱'
