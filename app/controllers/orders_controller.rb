@@ -9,7 +9,7 @@ class OrdersController < ApplicationController
     def show
         id = params[:id]
         order = Order.find(id)
-        render json: order, include: :customer
+        render json: order, include: [:customer, :cake]
     end 
 
     def create

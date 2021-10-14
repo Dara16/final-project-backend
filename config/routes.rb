@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :orders do
-    resources :customers
+    resources :customers, :cakes
   end
 
   resources :customers do
